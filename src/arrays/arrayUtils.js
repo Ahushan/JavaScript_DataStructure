@@ -41,8 +41,8 @@ let doubled = arr.map(num => num * 2);
 console.log("Doubled:", doubled);
 
 // Reducing (sum)
-let sum = arr.reduce((acc, cur) => acc + cur, 0);
-console.log("Sum:", sum);
+let sumAll = arr.reduce((acc, cur) => acc + cur, 0);
+console.log("Sum:", sumAll);
 
 // 4. Usage Comments
 // Arrays are best for ordered data storage where index-based access is needed.

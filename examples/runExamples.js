@@ -3,37 +3,37 @@
 // ===============================
 
 // Import all DS modules (adjust paths if needed)
-const ArrayUtils = require("./arrayUtils.js");
-const Stack = require("./stack.js");
-const Queue = require("./queue.js");
-const QueueLinkedList = require("./queueLinkedList.js");
-const Deque = require("./deque.js");
-const SinglyLinkedList = require("./singlyLinkedList.js");
-const BST = require("./binarySearchTree.js");
-const MinHeap = require("./minHeap.js");
-const MaxHeap = require("./maxHeap.js");
-const SetWrapper = require("./setWrapper.js");
-const MapWrapper = require("./mapWrapper.js");
-const HashMap = require("./hashMap.js");
-const HashTable = require("./hashTable.js");
-const Graph = require("./graph.js");
-const GraphMatrix = require("./graphMatrix.js");
-const Trie = require("./trie.js");
-const AVLTree = require("./avlTree.js");
-const RedBlackTree = require("./redBlackTree.js");
-const PriorityQueue = require("./priorityQueue.js");
-const DisjointSet = require("./disjointSet.js");
+const ArrayUtils = require("../src/arrays/arrayUtils.js");
+const Stack = require("../src/stack/stack.js");
+const Queue = require("../src/queue/queue.js");
+const QueueLinkedList = require("../src/queue/queueLinkedList.js");
+const Deque = require("../src/queue/deque.js");
+const SinglyLinkedList = require("../src/linkedlist/singlyLinkedList.js");
+const BST = require("../src/tree/binarySearchTree.js");
+const MinHeap = require("../src/heap/minHeap.js");
+const MaxHeap = require("../src/heap/maxHeap.js");
+const SetWrapper = require("../src/set/setWrapper.js");
+const MapWrapper = require("../src/hash_map_table/mapWrapper.js");
+const HashMap = require("../src/hash_map_table/hashMap.js");
+const HashTable = require("../src/hash_map_table/hashTable.js");
+const Graph = require("../src/graph/graph.js");
+const GraphMatrix = require("../src/graph/graphMatrix.js");
+const Trie = require("../src/tree/trie.js");
+const AVLTree = require("../src/tree/avlTree.js");
+const RedBlackTree = require("../src/tree/redBlackTree.js");
+const PriorityQueue = require("../src/advance_ds/priorityQueue.js");
+const DisjointSet = require("../src/advance_ds/disjointSet.js");
 
 // ===============================
 // Test Examples
 // ===============================
 
-console.log("========== ARRAY UTILS ==========");
+console.log("\t\t\t========== ARRAY UTILS ==========");
 const arr = [1, 2, 3, 4, 5];
 console.log("Original array:", arr);
 console.log("Sum:", ArrayUtils.sumAll(arr));
 
-console.log("\n========== STACK ==========");
+console.log("\n\t\t\t========== STACK ==========");
 const stack = new Stack();
 stack.push(10);
 stack.push(20);
@@ -42,7 +42,7 @@ stack.print();
 console.log("Pop:", stack.pop());
 stack.print();
 
-console.log("\n========== QUEUE (ARRAY) ==========");
+console.log("\n\t\t\t========== QUEUE (ARRAY) ==========");
 const queue = new Queue();
 queue.enqueue(10);
 queue.enqueue(20);
@@ -51,7 +51,7 @@ queue.print();
 console.log("Dequeue:", queue.dequeue());
 queue.print();
 
-console.log("\n========== QUEUE (LINKED LIST) ==========");
+console.log("\n\t\t\t========== QUEUE (LINKED LIST) ==========");
 const queueLL = new QueueLinkedList();
 queueLL.enqueue(10);
 queueLL.enqueue(20);
@@ -60,7 +60,7 @@ queueLL.print();
 console.log("Dequeue:", queueLL.dequeue());
 queueLL.print();
 
-console.log("\n========== DEQUE ==========");
+console.log("\n\t\t\t========== DEQUE ==========");
 const deque = new Deque();
 deque.addFront(10);
 deque.addRear(20);
@@ -70,7 +70,7 @@ console.log("Remove Front:", deque.removeFront());
 console.log("Remove Rear:", deque.removeRear());
 deque.print();
 
-console.log("\n========== SINGLY LINKED LIST ==========");
+console.log("\n\t\t\t========== SINGLY LINKED LIST ==========");
 const sll = new SinglyLinkedList();
 sll.append(10);
 sll.append(20);
@@ -81,7 +81,7 @@ sll.print();
 sll.removeAt(2);
 sll.print();
 
-console.log("\n========== BST ==========");
+console.log("\n\t\t\t========== BST ==========");
 const bst = new BST();
 bst.insert(50);
 bst.insert(30);
@@ -92,7 +92,7 @@ bst.insert(60);
 bst.insert(80);
 bst.inorder();
 
-console.log("\n========== MIN HEAP ==========");
+console.log("\n\t\t\t========== MIN HEAP ==========");
 const minHeap = new MinHeap();
 minHeap.insert(10);
 minHeap.insert(5);
@@ -101,7 +101,7 @@ minHeap.print();
 console.log("Extract Min:", minHeap.extractMin());
 minHeap.print();
 
-console.log("\n========== MAX HEAP ==========");
+console.log("\n\t\t\t========== MAX HEAP ==========");
 const maxHeap = new MaxHeap();
 maxHeap.insert(10);
 maxHeap.insert(50);
@@ -110,7 +110,7 @@ maxHeap.print();
 console.log("Extract Max:", maxHeap.extractMax());
 maxHeap.print();
 
-console.log("\n========== SET WRAPPER ==========");
+console.log("\n\t\t\t========== SET WRAPPER ==========");
 const mySet = new SetWrapper();
 mySet.add(10);
 mySet.add(20);
@@ -120,28 +120,28 @@ console.log("Has 20?", mySet.has(20));
 mySet.remove(20);
 mySet.print();
 
-console.log("\n========== MAP WRAPPER ==========");
+console.log("\n\t\t\t========== MAP WRAPPER ==========");
 const myMap = new MapWrapper();
 myMap.set("name", "Ahushan");
 myMap.set("age", 23);
 myMap.print();
 console.log("Get age:", myMap.get("age"));
 
-console.log("\n========== HASH MAP ==========");
+console.log("\n\t\t\t========== HASH MAP ==========");
 const myHashMap = new HashMap();
 myHashMap.set("name", "Ahushan");
 myHashMap.set("age", 23);
 myHashMap.print();
 console.log("Get 'name':", myHashMap.get("name"));
 
-console.log("\n========== HASH TABLE ==========");
+console.log("\n\t\t\t========== HASH TABLE ==========");
 const myHashTable = new HashTable();
 myHashTable.set("name", "Ahushan");
 myHashTable.set("age", 23);
 myHashTable.print();
 console.log("Get 'age':", myHashTable.get("age"));
 
-console.log("\n========== GRAPH (ADJ LIST) ==========");
+console.log("\n\t\t\t========== GRAPH (ADJ LIST) ==========");
 const graph = new Graph(4);
 graph.addEdge(0, 1);
 graph.addEdge(0, 2);
@@ -149,7 +149,7 @@ graph.addEdge(1, 2);
 graph.addEdge(2, 3);
 graph.print();
 
-console.log("\n========== GRAPH (ADJ MATRIX) ==========");
+console.log("\n\t\t\t========== GRAPH (ADJ MATRIX) ==========");
 const graphMatrix = new GraphMatrix(4);
 graphMatrix.addEdge(0, 1);
 graphMatrix.addEdge(0, 2);
@@ -157,14 +157,14 @@ graphMatrix.addEdge(1, 2);
 graphMatrix.addEdge(2, 3);
 graphMatrix.printMatrix();
 
-console.log("\n========== TRIE ==========");
+console.log("\n\t\t\t========== TRIE ==========");
 const trie = new Trie();
 trie.insert("hello");
 trie.insert("hi");
 trie.insert("helium");
 trie.printAllWords();
 
-console.log("\n========== AVL TREE ==========");
+console.log("\n\t\t\t========== AVL TREE ==========");
 const avl = new AVLTree();
 avl.insert(30);
 avl.insert(20);
@@ -173,7 +173,7 @@ avl.insert(10);
 avl.insert(25);
 avl.printInorder();
 
-console.log("\n========== RED-BLACK TREE ==========");
+console.log("\n\t\t\t========== RED-BLACK TREE ==========");
 const rb = new RedBlackTree();
 rb.insert(10);
 rb.insert(20);
@@ -181,7 +181,7 @@ rb.insert(30);
 rb.insert(15);
 rb.printInorder();
 
-console.log("\n========== PRIORITY QUEUE ==========");
+console.log("\n\t\t\t========== PRIORITY QUEUE ==========");
 const pq = new PriorityQueue();
 pq.enqueue("Task A", 3);
 pq.enqueue("Task B", 1);
@@ -190,7 +190,7 @@ pq.print();
 console.log("Dequeue:", pq.dequeue());
 pq.print();
 
-console.log("\n========== DISJOINT SET ==========");
+console.log("\n\t\t\t========== DISJOINT SET ==========");
 const ds = new DisjointSet(5);
 ds.union(0, 1);
 ds.union(1, 2);
