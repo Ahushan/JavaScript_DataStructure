@@ -263,25 +263,40 @@ Tracks disjoint sets with union/find operations. Supports **path compression** &
 | Graph           | Relationships/networks      | BFS/DFS, paths           |
 | Disjoint Set    | Component tracking          | MST, clustering          |
 
-FULL SUMMARY — “Which DS exist in JS, which don’t?”
+## **FULL SUMMARY — “Which DS exist in JS, which don’t?”
 
-DS	In-built?	Created using
-
-Array	✔	native array
-Object	✔	native object
-Map	    ✔	native map structure
-Set	    ✔	native set structure
-
-Stack	❌	Array
-Queue	❌	Array / LinkedList
-Deque	❌	Array / LinkedList
-LinkedList	❌	Node objects
-Doubly LinkedList	❌	Node objects
-HashTable	❌	Array + List
-BST	❌	Node objects
-AVL / RedBlackTree	❌	Node objects
-Heap (Min/Max)	❌	Array
-Priority Queue	❌	Heap
-Trie	❌	object tree
-Graph	❌	Map + array
-DisjointSet	❌	arrays
++-------------------+-------------------------------+-------------------------------+
+| Data Structure    | Best Use Case                | Recommended When              |
++-------------------+-------------------------------+-------------------------------+
+| Array             | Indexed access, fast reads    | Small/medium lists, random    |
+|                   |                               | access needed                 |
++-------------------+-------------------------------+-------------------------------+
+| Linked List       | Frequent insert/delete        | Dynamic growing data,         |
+|                   | in middle                     | minimal random access         |
++-------------------+-------------------------------+-------------------------------+
+| Stack             | LIFO operations               | Undo/redo, call stack,        |
+|                   |                               | parsing                       |
++-------------------+-------------------------------+-------------------------------+
+| Queue             | FIFO operations               | Scheduling, task queues, BFS  |
++-------------------+-------------------------------+-------------------------------+
+| BST               | Ordered data + searching      | When sorted data needed       |
+| (Unbalanced)      |                               | but low insertion/deletion    |
++-------------------+-------------------------------+-------------------------------+
+| AVL / RB Tree     | Balanced search + fast ops    | Real-time indexing, databases |
+|                   | (O(log n) guaranteed)         | or when worst-case matters    |
++-------------------+-------------------------------+-------------------------------+
+| Hash Table / Map  | Key-value fast lookup         | Fast access, caching, hashing |
+|                   | Avg O(1)                      | operations                    |
++-------------------+-------------------------------+-------------------------------+
+| Heap (Min/Max)    | Retrieve highest/lowest item  | Priority Queue, scheduling,   |
+|                   | fast                          | Dijkstra (priority ops)       |
++-------------------+-------------------------------+-------------------------------+
+| Trie              | Fast prefix checks            | Autocomplete, dictionaries,   |
+|                   |                               | word search                   |
++-------------------+-------------------------------+-------------------------------+
+| Graph             | Relationship modeling         | BFS/DFS, shortest paths,      |
+|                   | (nodes + edges)               | networks, maps                |
++-------------------+-------------------------------+-------------------------------+
+| Disjoint Set      | Group/cluster tracking        | MST (Kruskal), connected      |
+| (Union–Find)      | Fast unions/finds             | components, cycle detection   |
++-------------------+-------------------------------+-------------------------------+
