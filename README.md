@@ -262,3 +262,26 @@ Tracks disjoint sets with union/find operations. Supports **path compression** &
 | AVL / RB Tree   | Balanced search/insert      | Real-time DB indexing    |
 | Graph           | Relationships/networks      | BFS/DFS, paths           |
 | Disjoint Set    | Component tracking          | MST, clustering          |
+
+FULL SUMMARY — “Which DS exist in JS, which don’t?”
+
+DS	In-built?	Created using
+
+Array	✔	native array
+Object	✔	native object
+Map	    ✔	native map structure
+Set	    ✔	native set structure
+
+Stack	❌	Array
+Queue	❌	Array / LinkedList
+Deque	❌	Array / LinkedList
+LinkedList	❌	Node objects
+Doubly LinkedList	❌	Node objects
+HashTable	❌	Array + List
+BST	❌	Node objects
+AVL / RedBlackTree	❌	Node objects
+Heap (Min/Max)	❌	Array
+Priority Queue	❌	Heap
+Trie	❌	object tree
+Graph	❌	Map + array
+DisjointSet	❌	arrays
