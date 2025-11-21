@@ -265,38 +265,24 @@ Tracks disjoint sets with union/find operations. Supports **path compression** &
 
 ## **FULL SUMMARY — “Which DS exist in JS, which don’t?”
 
-+-------------------+-------------------------------+-------------------------------+
-| Data Structure    | Best Use Case                | Recommended When              |
-+-------------------+-------------------------------+-------------------------------+
-| Array             | Indexed access, fast reads    | Small/medium lists, random    |
-|                   |                               | access needed                 |
-+-------------------+-------------------------------+-------------------------------+
-| Linked List       | Frequent insert/delete        | Dynamic growing data,         |
-|                   | in middle                     | minimal random access         |
-+-------------------+-------------------------------+-------------------------------+
-| Stack             | LIFO operations               | Undo/redo, call stack,        |
-|                   |                               | parsing                       |
-+-------------------+-------------------------------+-------------------------------+
-| Queue             | FIFO operations               | Scheduling, task queues, BFS  |
-+-------------------+-------------------------------+-------------------------------+
-| BST               | Ordered data + searching      | When sorted data needed       |
-| (Unbalanced)      |                               | but low insertion/deletion    |
-+-------------------+-------------------------------+-------------------------------+
-| AVL / RB Tree     | Balanced search + fast ops    | Real-time indexing, databases |
-|                   | (O(log n) guaranteed)         | or when worst-case matters    |
-+-------------------+-------------------------------+-------------------------------+
-| Hash Table / Map  | Key-value fast lookup         | Fast access, caching, hashing |
-|                   | Avg O(1)                      | operations                    |
-+-------------------+-------------------------------+-------------------------------+
-| Heap (Min/Max)    | Retrieve highest/lowest item  | Priority Queue, scheduling,   |
-|                   | fast                          | Dijkstra (priority ops)       |
-+-------------------+-------------------------------+-------------------------------+
-| Trie              | Fast prefix checks            | Autocomplete, dictionaries,   |
-|                   |                               | word search                   |
-+-------------------+-------------------------------+-------------------------------+
-| Graph             | Relationship modeling         | BFS/DFS, shortest paths,      |
-|                   | (nodes + edges)               | networks, maps                |
-+-------------------+-------------------------------+-------------------------------+
-| Disjoint Set      | Group/cluster tracking        | MST (Kruskal), connected      |
-| (Union–Find)      | Fast unions/finds             | components, cycle detection   |
-+-------------------+-------------------------------+-------------------------------+
+## JavaScript Data Structures — Built-in vs Custom
+
+| Data Structure         | In-built? | Created Using            |
+|------------------------|-----------|--------------------------|
+| **Array**              | ✔ Yes     | Native Array             |
+| **Object**             | ✔ Yes     | Native Object            |
+| **Map**                | ✔ Yes     | Native Map               |
+| **Set**                | ✔ Yes     | Native Set               |
+| **Stack**              | ❌ No     | Array                    |
+| **Queue**              | ❌ No     | Array / LinkedList       |
+| **Deque**              | ❌ No     | Array / LinkedList       |
+| **Linked List**        | ❌ No     | Node objects             |
+| **Doubly Linked List** | ❌ No     | Node objects             |
+| **Hash Table**         | ❌ No     | Array + List (buckets)   |
+| **BST** (Binary Tree)  | ❌ No     | Node objects             |
+| **AVL / Red-Black Tree** | ❌ No   | Node objects             |
+| **Heap (Min/Max)**     | ❌ No     | Array                    |
+| **Priority Queue**     | ❌ No     | Heap                     |
+| **Trie**               | ❌ No     | Object tree / Maps       |
+| **Graph**              | ❌ No     | Map + Array              |
+| **Disjoint Set**       | ❌ No     | Arrays (parent/rank)     |
