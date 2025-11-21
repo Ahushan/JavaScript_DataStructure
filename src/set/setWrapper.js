@@ -1,7 +1,4 @@
-// ===============================
-// 📂 setWrapper.js - Set Wrapper
-// ===============================
-
+// * setWrapper.js - Set Wrapper
 // 1. Syntax for Set
 // A Set is a collection of unique values (no duplicates).
 // Example: let mySet = new Set([1, 2, 3]);
@@ -18,6 +15,14 @@ class SetWrapper {
 
   delete(value) {
     return this.set.delete(value);
+  }
+
+  remove(value) {
+    if (this.set.has(value)) {
+      this.set.delete(value);
+      return true;
+    }
+    return false;
   }
 
   has(value) {
@@ -87,5 +92,7 @@ uniqueVisitors.add("user2");
 uniqueVisitors.add("user3");
 uniqueVisitors.add("user1"); // duplicate ignored
 
-console.log("👥 Unique Visitors:", uniqueVisitors.values());
+console.log("Unique Visitors:", uniqueVisitors.values());
 console.log("Total Visitors:", uniqueVisitors.size());
+
+module.exports = { SetWrapper }

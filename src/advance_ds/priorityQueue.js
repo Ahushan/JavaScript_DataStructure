@@ -1,6 +1,5 @@
-// ===============================
-// 📂 priorityQueue.js - Priority Queue (Min-Heap based)
-// ===============================
+// * priorityQueue.js - Priority Queue (Min-Heap based)
+
 
 // 1. Syntax for Priority Queue
 // Priority Queue stores elements with priorities. 
@@ -113,3 +112,15 @@ pq.print();
 
 // 7. Real-World Example
 // Example: Printer queue where urgent print jobs go first
+
+
+module.exports = { PriorityQueue };
+
+// Example: Printer queue where urgent print jobs go first
+const printerQueue = new PriorityQueue();
+printerQueue.enqueue("Print Document A", 2); // Normal priority
+printerQueue.enqueue("Print Document B", 1); // High priority
+printerQueue.enqueue("Print Document C", 3); // Low priority
+
+console.log("Printer Queue:");
+printerQueue.print();

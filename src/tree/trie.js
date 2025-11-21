@@ -1,6 +1,6 @@
-// ===============================
-// 📂 trie.js - Trie / Prefix Tree
-// ===============================
+
+// * trie.js - Trie / Prefix Tree
+
 
 // 1. Syntax for Trie
 // A Trie stores strings (words) as a tree of characters.
@@ -100,3 +100,5 @@ searchTrie.insert("banana");
 
 console.log("Autocomplete for 'app':");
 searchTrie.printAllWords(searchTrie.root.children['a'].children['p']);
+
+module.exports = { Trie };

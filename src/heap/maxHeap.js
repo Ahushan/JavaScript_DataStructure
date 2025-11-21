@@ -1,7 +1,4 @@
-// ===============================
-// 📂 maxHeap.js - Max Heap
-// ===============================
-
+// * maxHeap.js - Max Heap
 // 1. Syntax for Max Heap
 // A max heap is a complete binary tree where
 // the parent node is greater than its children.
@@ -143,3 +140,5 @@ tasks.insert({ task: "Task C", priority: 2 });
 // For simplicity, using numbers directly.
 console.log("Heap of task priorities:");
 maxHeap.print();
+
+module.exports = { MaxHeap };

@@ -1,6 +1,6 @@
-// ===============================
-// 📂 graph.js - Graph (Adjacency List)
-// ===============================
+
+// * graph.js - Graph (Adjacency List)
+
 
 // 1. Syntax for Graph
 // A graph is a collection of vertices (nodes) and edges (connections between nodes).
@@ -124,3 +124,5 @@ console.log("Social Network connections:");
 socialGraph.printGraph();
 console.log("DFS starting from Alice:", socialGraph.dfs("Alice"));
 console.log("BFS starting from Alice:", socialGraph.bfs("Alice"));
+
+module.exports = { Graph };

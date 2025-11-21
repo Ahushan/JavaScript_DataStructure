@@ -93,3 +93,5 @@ console.log("⬅️ Back to:", historyStack.pop());
 
 // Current page
 console.log("🌐 Current Page:", historyStack.peek());
+
+module.exports = { Stack}

@@ -1,8 +1,4 @@
-// hashMap.js - hash map example
-// ===============================
-// 📂 hashMap.js - Hash Map Example
-// ===============================
-
+// * hashMap.js - Hash Map Example
 // 1. Syntax for Hash Map
 // A hash map (or dictionary) stores key-value pairs
 // and allows fast lookup, insertion, and deletion based on keys.
@@ -104,4 +100,6 @@ words.forEach(word => {
 });
 
 console.log("Word Frequencies:");
-frequencyMap.print(); 
+frequencyMap.print();
+
+module.exports = { HashMap };

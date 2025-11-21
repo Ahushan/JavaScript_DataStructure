@@ -1,6 +1,4 @@
-// ===============================
-// 📂 disjointSet.js - Disjoint Set / Union-Find
-// ===============================
+// * disjointSet.js - Disjoint Set / Union-Find
 
 // 1. Syntax for Disjoint Set
 // Disjoint Set keeps track of disjoint sets for union and find operations.
@@ -72,3 +70,5 @@ ds.print();
 
 // 7. Real-World Example
 // Example: Social network friend groups (connected components)
+
+module.exports = { DisjointSet };

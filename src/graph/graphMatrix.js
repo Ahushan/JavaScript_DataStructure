@@ -1,6 +1,4 @@
-// ===============================
-// 📂 graphMatrix.js - Graph using Adjacency Matrix
-// ===============================
+// * graphMatrix.js - Graph using Adjacency Matrix
 
 // 1. Syntax for Graph (Adjacency Matrix)
 // Represent graph using a 2D matrix where matrix[i][j] = 1 if edge exists, else 0.
@@ -82,3 +80,5 @@ airlineGraph.addEdge(0, 2); // City 0 to City 2
 airlineGraph.addEdge(3, 4); // City 3 to City 4
 console.log("Airline route map:");
 airlineGraph.printMatrix();
+
+module.exports = { GraphMatrix };

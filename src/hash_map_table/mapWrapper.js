@@ -1,6 +1,6 @@
-// ===============================
-// 📂 mapWrapper.js - JS Map Wrapper
-// ===============================
+
+// * mapWrapper.js - JS Map Wrapper
+
 
 // 1. Syntax for Map
 // Map stores key-value pairs. Keys can be any type. Maintains insertion order.
@@ -77,3 +77,5 @@ mapWrapper.print();
 
 // 7. Real-World Example
 // Example: Storing user sessions keyed by session objects
+
+module.exports = { MapWrapper };

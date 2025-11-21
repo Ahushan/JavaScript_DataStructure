@@ -1,6 +1,4 @@
-// ===============================
-// 📂 minHeap.js - Min Heap
-// ===============================
+// * minHeap.js - Min Heap
 
 // 1. Syntax for Min Heap
 // A min heap is a complete binary tree where
@@ -144,3 +142,5 @@ tasks.insert({ task: "Task C", priority: 2 });
 
 console.log("Heap of task priorities:");
 minHeap.print();
+
+module.exports = { MinHeap };

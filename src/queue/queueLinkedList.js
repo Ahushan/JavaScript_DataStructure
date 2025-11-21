@@ -1,6 +1,4 @@
-// ===========================
-// 📂 queueLinkedList.js - Queue using Linked List
-// ===========================
+// * queueLinkedList.js - Queue using Linked List
 
 // 1. Syntax for Queue
 // Queue is FIFO (First In First Out). Using linked list, head = front, tail = rear.
@@ -112,3 +110,5 @@ console.log("Queue of customers:");
 customerQueue.print();
 console.log("Serving:", customerQueue.dequeue());
 console.log("Next in line:", customerQueue.peek());
+
+module.exports = { QueueLinkedList }

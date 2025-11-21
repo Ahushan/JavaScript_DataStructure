@@ -1,6 +1,6 @@
-// ===============================
-// 📂 avlTree.js - AVL Tree (Self-Balancing BST)
-// ===============================
+
+// * avlTree.js - AVL Tree (Self-Balancing BST)
+
 
 // 1. Syntax for AVL Tree
 // AVL Tree is a BST where heights of left & right subtrees differ by at most 1.
@@ -147,3 +147,5 @@ leaderboard.insert(800);
 
 console.log("Leaderboard scores (inorder):");
 leaderboard.printInorder();
+
+module.exports = { AVLTree };

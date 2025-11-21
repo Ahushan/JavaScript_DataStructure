@@ -1,6 +1,5 @@
-// ===============================
-// 📂 hashTable.js - Hash Table with Chaining
-// ===============================
+
+// * hashTable.js - Hash Table with Chaining
 
 // 1. Syntax for Hash Table
 // Hash table stores key-value pairs using a hash function and handles collisions using chaining (array of buckets).
@@ -98,3 +97,5 @@ hashTable.print();
 
 // 7. Real-World Example
 // Example: Storing user data keyed by user IDs for quick access
+
+module.exports = { HashTable };

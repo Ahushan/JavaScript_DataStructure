@@ -1,7 +1,4 @@
-// ===========================
-// 📂 queue.js - Queue (Array)
-// ===========================
-
+// * queue.js - Queue (Array)
 // 1. Syntax for Queue
 // A queue is a linear data structure that follows
 // FIFO (First In, First Out) principle.
@@ -88,9 +85,11 @@ customerQueue.enqueue("Customer A");
 customerQueue.enqueue("Customer B");
 customerQueue.enqueue("Customer C");
 
-console.log("🧑‍🤝‍🧑 Customers in queue:");
+console.log("Customers in queue:");
 customerQueue.print();
 
 // Serving customers
 console.log("Serving:", customerQueue.dequeue());
 console.log("Next in line:", customerQueue.peek());
+
+module.exports = { Queue}

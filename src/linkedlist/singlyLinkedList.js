@@ -1,6 +1,4 @@
-// ======================================
-// 📂 singlyLinkedList.js - Singly Linked List
-// ======================================
+// singlyLinkedList.js - Singly Linked List
 
 // 1. Syntax for Singly Linked List
 // A linked list is a linear data structure where each node points to the next node.
@@ -86,6 +84,58 @@ class SinglyLinkedList {
     return removed.value;
   }
 
+  // Insert at position (index)
+  insertAt(value, index) {
+    if (index < 0 || index > this.length) return false;
+
+    if (index === 0) {
+      this.prepend(value);
+      return true;
+    }
+    if (index === this.length) {
+      this.append(value);
+      return true;
+    }
+
+    const newNode = new Node(value);
+    let current = this.head;
+    let prev = null;
+    let i = 0;
+
+    while (i < index) {
+      prev = current;
+      current = current.next;
+      i++;
+    }
+
+    prev.next = newNode;
+    newNode.next = current;
+    this.length++;
+    return true;
+
+  }
+
+  // Remove at position (index)
+  removeAt(index) {
+    if (index < 0 || index >= this.length) return null;
+
+    if (index === 0) return this.removeFirst();
+    if (index === this.length - 1) return this.removeLast();
+    let current = this.head;
+    let prev = null;
+    let i = 0;
+
+    while (i < index) {
+      prev = current;
+      current = current.next;
+      i++;
+    }
+
+    prev.next = current.next;
+    this.length--;
+    return current.value;
+  }
+
   // Print list
   print() {
     let current = this.head;
@@ -104,7 +154,7 @@ const linkedList = new SinglyLinkedList();
 // Add nodes
 linkedList.append(10);
 linkedList.append(20);
-linkedList.prepend(5);
+linkedList.append(30);
 console.log("Linked List after additions:");
 linkedList.print();
 
@@ -133,8 +183,10 @@ const playlist = new SinglyLinkedList();
 playlist.append("Song A");
 playlist.append("Song B");
 playlist.append("Song C");
-console.log("🎵 Playlist:");
+console.log("Playlist:");
 playlist.print();
 playlist.removeFirst(); // Remove played song
 console.log("Playlist after playing one song:");
 playlist.print();
+
+module.exports = { SinglyLinkedList }

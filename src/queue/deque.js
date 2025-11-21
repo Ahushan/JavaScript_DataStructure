@@ -1,6 +1,4 @@
-// ===============================
-// 📂 deque.js - Double-Ended Queue
-// ===============================
+// * deque.js - Double-Ended Queue
 
 // 1. Syntax for Deque
 // A deque (double-ended queue) allows insertion and deletion
@@ -114,3 +112,5 @@ browserHistory.addRear("github.com");
 
 console.log("🌐 Current Browser History:");
 browserHistory.print();
+
+module.exports = { Deque }

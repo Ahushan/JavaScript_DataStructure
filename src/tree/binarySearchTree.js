@@ -1,7 +1,4 @@
-// =======================================
-// 📂 binarySearchTree.js - BST Implementation
-// =======================================
-
+// * binarySearchTree.js - BST Implementation
 // 1. Syntax for Binary Search Tree (BST)
 // A tree where each node has up to two children.
 // Left child < Parent < Right child.
@@ -125,7 +122,9 @@ scores.insert(95);
 scores.insert(60);
 scores.insert(90);
 
-console.log("🎓 Student Scores (Inorder - Sorted):");
+console.log("Student Scores (Inorder - Sorted):");
 scores.inorder();
 console.log("Find top score:", scores.findMax());
 console.log("Find lowest score:", scores.findMin());
+
+module.exports = { BinarySearchTree }

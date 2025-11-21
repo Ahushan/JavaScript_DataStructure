@@ -1,6 +1,4 @@
-// ===============================
-// 📂 arrayUtils.js - Array Helpers
-// ===============================
+// arrayUtils.js - Array Helpers
 
 // 1. Syntax for Array
 // In JavaScript, an array is declared using square brackets []
@@ -34,15 +32,16 @@ console.log("Index of 30:", arr.indexOf(30));
 
 // Filtering
 let filtered = arr.filter(num => num > 15);
-console.log("Filtered >15:", filtered);
+console.log("Filtered > 15:", filtered);
 
 // Mapping
 let doubled = arr.map(num => num * 2);
 console.log("Doubled:", doubled);
 
-// Reducing (sum)
-let sumAll = arr.reduce((acc, cur) => acc + cur, 0);
-console.log("Sum:", sumAll);
+// Reducing function export (sum)
+const SumAll = (arr) => arr.reduce((acc, num) => acc + num, 0);
+console.log("Sum of all elements:", SumAll(arr));
+
 
 // 4. Usage Comments
 // Arrays are best for ordered data storage where index-based access is needed.
@@ -67,4 +66,6 @@ shoppingCart.push("Butter");
 shoppingCart.splice(shoppingCart.indexOf("Eggs"), 1);
 
 // Display cart
-console.log("🛒 Shopping Cart:", shoppingCart);
+console.log("Shopping Cart:", shoppingCart);
+
+module.exports = { SumAll };

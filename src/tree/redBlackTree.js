@@ -1,6 +1,6 @@
-// ===============================
-// 📂 redBlackTree.js - Red-Black Tree
-// ===============================
+
+// * redBlackTree.js - Red-Black Tree
+
 
 // 1. Syntax for Red-Black Tree
 // Red-Black Tree is a self-balancing BST with these properties:
@@ -161,3 +161,5 @@ rbTree.printInorder();
 
 // 7. Real-World Example
 // Example: Java TreeMap, C++ std::map use Red-Black Trees internally
+
+module.exports = { RedBlackTree };
