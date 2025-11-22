@@ -137,16 +137,18 @@ class RedBlackTree {
   }
 }
 
-// Example Initialization
-const rbTree = new RedBlackTree();
-rbTree.insert(10);
-rbTree.insert(20);
-rbTree.insert(30);
-rbTree.insert(15);
+if (require.main === module) {
 
-console.log("Red-Black Tree Inorder Traversal:");
-rbTree.printInorder();
+  // Example Initialization
+  const rbTree = new RedBlackTree();
+  rbTree.insert(10);
+  rbTree.insert(20);
+  rbTree.insert(30);
+  rbTree.insert(15);
 
+  console.log("Red-Black Tree Inorder Traversal:");
+  rbTree.printInorder();
+}
 // 4. Usage Comments
 // Red-Black Tree keeps BST balanced automatically for O(log n) operations.
 

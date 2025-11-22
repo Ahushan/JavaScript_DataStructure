@@ -76,55 +76,57 @@ class BinarySearchTree {
     return node.value;
   }
 }
+if (require.main === module) {
 
-// Example Initialization
-const bst = new BinarySearchTree();
-bst.insert(50);
-bst.insert(30);
-bst.insert(70);
-bst.insert(20);
-bst.insert(40);
-bst.insert(60);
-bst.insert(80);
+  // Example Initialization
+  const bst = new BinarySearchTree();
+  bst.insert(50);
+  bst.insert(30);
+  bst.insert(70);
+  bst.insert(20);
+  bst.insert(40);
+  bst.insert(60);
+  bst.insert(80);
 
-// Traversal
-console.log("Inorder Traversal:");
-bst.inorder();
+  // Traversal
+  console.log("Inorder Traversal:");
+  bst.inorder();
 
-// Search
-console.log("Search 60:", bst.search(60));
-console.log("Search 90:", bst.search(90));
+  // Search
+  console.log("Search 60:", bst.search(60));
+  console.log("Search 90:", bst.search(90));
 
-// Min & Max
-console.log("Min Value:", bst.findMin());
-console.log("Max Value:", bst.findMax());
+  // Min & Max
+  console.log("Min Value:", bst.findMin());
+  console.log("Max Value:", bst.findMax());
 
-// 4. Usage Comments
-// BST maintains sorted data and allows efficient search, insert, and delete.
+  // 4. Usage Comments
+  // BST maintains sorted data and allows efficient search, insert, and delete.
 
-// 5. Pros & Cons
-// Pros: O(log n) average time for search, insert, delete (balanced BST).
-// Cons: Worst case O(n) if tree becomes skewed (like a linked list).
-// Requires balancing (AVL, Red-Black Tree) for efficiency.
+  // 5. Pros & Cons
+  // Pros: O(log n) average time for search, insert, delete (balanced BST).
+  // Cons: Worst case O(n) if tree becomes skewed (like a linked list).
+  // Requires balancing (AVL, Red-Black Tree) for efficiency.
 
-// 6. Where to Use
-// - Storing sorted data for quick lookup.
-// - Implementing sets, maps, and databases.
-// - Auto-suggestion systems (prefix search).
-// - Range queries (find min/max within range).
+  // 6. Where to Use
+  // - Storing sorted data for quick lookup.
+  // - Implementing sets, maps, and databases.
+  // - Auto-suggestion systems (prefix search).
+  // - Range queries (find min/max within range).
 
-// 7. Real-World Example
-// Example: Student Score Management
-let scores = new BinarySearchTree();
-scores.insert(85);
-scores.insert(70);
-scores.insert(95);
-scores.insert(60);
-scores.insert(90);
+  // 7. Real-World Example
+  // Example: Student Score Management
+  let scores = new BinarySearchTree();
+  scores.insert(85);
+  scores.insert(70);
+  scores.insert(95);
+  scores.insert(60);
+  scores.insert(90);
 
-console.log("Student Scores (Inorder - Sorted):");
-scores.inorder();
-console.log("Find top score:", scores.findMax());
-console.log("Find lowest score:", scores.findMin());
+  console.log("Student Scores (Inorder - Sorted):");
+  scores.inorder();
+  console.log("Find top score:", scores.findMax());
+  console.log("Find lowest score:", scores.findMin());
 
+}
 module.exports = { BinarySearchTree }

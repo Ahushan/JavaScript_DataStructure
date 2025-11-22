@@ -85,18 +85,29 @@ class PriorityQueue {
   }
 }
 
-// Example Usage
-const pq = new PriorityQueue();
-pq.enqueue("Task A", 3);
-pq.enqueue("Task B", 1);
-pq.enqueue("Task C", 2);
+if (require.main === module) {
+  // Example Usage
+  const pq = new PriorityQueue();
+  pq.enqueue("Task A", 3);
+  pq.enqueue("Task B", 1);
+  pq.enqueue("Task C", 2);
 
-console.log("Priority Queue after enqueue:");
-pq.print();
+  console.log("Priority Queue after enqueue:");
+  pq.print();
 
-console.log("Dequeue:", pq.dequeue());
-console.log("Priority Queue after dequeue:");
-pq.print();
+  console.log("Dequeue:", pq.dequeue());
+  console.log("Priority Queue after dequeue:");
+  pq.print();
+
+  // Example: Printer queue where urgent print jobs go first
+  const printerQueue = new PriorityQueue();
+  printerQueue.enqueue("Print Document A", 2); // Normal priority
+  printerQueue.enqueue("Print Document B", 1); // High priority
+  printerQueue.enqueue("Print Document C", 3); // Low priority
+
+  console.log("Printer Queue:");
+  printerQueue.print();
+}
 
 // 4. Usage Comments
 // Priority Queue ensures tasks are executed based on priority rather than insertion order.
@@ -113,14 +124,4 @@ pq.print();
 // 7. Real-World Example
 // Example: Printer queue where urgent print jobs go first
 
-
 module.exports = { PriorityQueue };
-
-// Example: Printer queue where urgent print jobs go first
-const printerQueue = new PriorityQueue();
-printerQueue.enqueue("Print Document A", 2); // Normal priority
-printerQueue.enqueue("Print Document B", 1); // High priority
-printerQueue.enqueue("Print Document C", 3); // Low priority
-
-console.log("Printer Queue:");
-printerQueue.print();

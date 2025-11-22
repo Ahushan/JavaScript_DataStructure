@@ -7,7 +7,7 @@
 
 class HashMap {
   constructor() {
-    this.map = {}; // stores key-value pairs
+    this.map = new Map();
   }
 
   // 2. Initialization & Declaration
@@ -53,53 +53,55 @@ class HashMap {
   }
 }
 
-// Example Initialization
-const hashMap = new HashMap();
+if (require.main === module) {
+  // Example Initialization
+  const hashMap = new HashMap();
 
-// Adding key-value pairs
-hashMap.set("name", "Ahushan");
-hashMap.set("age", 25);
-hashMap.set("role", "Developer");
-hashMap.print();
+  // Adding key-value pairs
+  hashMap.set("name", "Ahushan");
+  hashMap.set("age", 25);
+  hashMap.set("role", "Developer");
+  hashMap.print();
 
-// Accessing values
-console.log("Name:", hashMap.get("name"));
-console.log("Has 'age' key:", hashMap.has("age"));
+  // Accessing values
+  console.log("Name:", hashMap.get("name"));
+  console.log("Has 'age' key:", hashMap.has("age"));
 
-// Deleting a key
-hashMap.delete("role");
-hashMap.print();
+  // Deleting a key
+  hashMap.delete("role");
+  hashMap.print();
 
-// Size
-console.log("Size:", hashMap.size());
+  // Size
+  console.log("Size:", hashMap.size());
 
-// Clearing the map
-hashMap.clear();
-hashMap.print();
+  // Clearing the map
+  hashMap.clear();
+  hashMap.print();
 
-// 4. Usage Comments
-// Hash maps are great for fast lookups, insertions, and deletions by key.
+  // 4. Usage Comments
+  // Hash maps are great for fast lookups, insertions, and deletions by key.
 
-// 5. Pros & Cons
-// Pros: Fast average O(1) lookup, dynamic storage.  
-// Cons: Collisions in real hash implementations, keys must be unique.
+  // 5. Pros & Cons
+  // Pros: Fast average O(1) lookup, dynamic storage.  
+  // Cons: Collisions in real hash implementations, keys must be unique.
 
-// 6. Where to Use
-// - Storing user information (ID → profile).  
-// - Caching values for quick access.  
-// - Implementing sets (key as item, value as true).  
+  // 6. Where to Use
+  // - Storing user information (ID → profile).  
+  // - Caching values for quick access.  
+  // - Implementing sets (key as item, value as true).  
 
-// 7. Real-World Example
-// Example: Counting word frequencies in a document
-const text = "hello world hello javascript";
-const words = text.split(" ");
-const frequencyMap = new HashMap();
+  // 7. Real-World Example
+  // Example: Counting word frequencies in a document
+  const text = "hello world hello javascript";
+  const words = text.split(" ");
+  const frequencyMap = new HashMap();
 
-words.forEach(word => {
-  frequencyMap.set(word, (frequencyMap.get(word) || 0) + 1);
-});
+  words.forEach(word => {
+    frequencyMap.set(word, (frequencyMap.get(word) || 0) + 1);
+  });
 
-console.log("Word Frequencies:");
-frequencyMap.print();
+  console.log("Word Frequencies:");
+  frequencyMap.print();
+}
 
 module.exports = { HashMap };

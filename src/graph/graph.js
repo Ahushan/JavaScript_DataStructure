@@ -76,53 +76,55 @@ class Graph {
   }
 }
 
-// Example Initialization
-const graph = new Graph();
+if (require.main === module) {
+  // Example Initialization
+  const graph = new Graph();
 
-// Adding vertices and edges
-graph.addVertex("A");
-graph.addVertex("B");
-graph.addVertex("C");
-graph.addEdge("A", "B");
-graph.addEdge("A", "C");
-graph.addEdge("B", "C");
-graph.addEdge("C", "D");
+  // Adding vertices and edges
+  graph.addVertex("A");
+  graph.addVertex("B");
+  graph.addVertex("C");
+  graph.addEdge("A", "B");
+  graph.addEdge("A", "C");
+  graph.addEdge("B", "C");
+  graph.addEdge("C", "D");
 
-console.log("Graph adjacency list:");
-graph.printGraph();
+  console.log("Graph adjacency list:");
+  graph.printGraph();
 
-// DFS
-console.log("DFS from A:", graph.dfs("A"));
+  // DFS
+  console.log("DFS from A:", graph.dfs("A"));
 
-// BFS
-console.log("BFS from A:", graph.bfs("A"));
+  // BFS
+  console.log("BFS from A:", graph.bfs("A"));
 
-// 4. Usage Comments
-// Graphs are used to represent networks and relationships.  
-// Adjacency list is memory-efficient for sparse graphs.
+  // 4. Usage Comments
+  // Graphs are used to represent networks and relationships.  
+  // Adjacency list is memory-efficient for sparse graphs.
 
-// 5. Pros & Cons
-// Pros: Efficient storage for sparse graphs, easy to traverse neighbors.  
-// Cons: Accessing an edge can take O(V) in adjacency list.  
-// For dense graphs, adjacency matrix may be faster.
+  // 5. Pros & Cons
+  // Pros: Efficient storage for sparse graphs, easy to traverse neighbors.  
+  // Cons: Accessing an edge can take O(V) in adjacency list.  
+  // For dense graphs, adjacency matrix may be faster.
 
-// 6. Where to Use
-// - Social networks (friend connections).  
-// - Maps & navigation (roads, paths).  
-// - Network routing algorithms.  
-// - Dependency resolution (package managers).
+  // 6. Where to Use
+  // - Social networks (friend connections).  
+  // - Maps & navigation (roads, paths).  
+  // - Network routing algorithms.  
+  // - Dependency resolution (package managers).
 
-// 7. Real-World Example
-// Example: Social network friend suggestions
-const socialGraph = new Graph();
-socialGraph.addEdge("Alice", "Bob");
-socialGraph.addEdge("Alice", "Charlie");
-socialGraph.addEdge("Bob", "David");
-socialGraph.addEdge("Charlie", "Eve");
+  // 7. Real-World Example
+  // Example: Social network friend suggestions
+  const socialGraph = new Graph();
+  socialGraph.addEdge("Alice", "Bob");
+  socialGraph.addEdge("Alice", "Charlie");
+  socialGraph.addEdge("Bob", "David");
+  socialGraph.addEdge("Charlie", "Eve");
 
-console.log("Social Network connections:");
-socialGraph.printGraph();
-console.log("DFS starting from Alice:", socialGraph.dfs("Alice"));
-console.log("BFS starting from Alice:", socialGraph.bfs("Alice"));
+  console.log("Social Network connections:");
+  socialGraph.printGraph();
+  console.log("DFS starting from Alice:", socialGraph.dfs("Alice"));
+  console.log("BFS starting from Alice:", socialGraph.bfs("Alice"));
 
+}
 module.exports = { Graph };

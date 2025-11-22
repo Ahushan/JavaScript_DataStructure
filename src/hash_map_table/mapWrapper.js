@@ -47,35 +47,36 @@ class MapWrapper {
     }
   }
 }
+if (require.main === module) {
 
-// Example Usage
-const mapWrapper = new MapWrapper();
-mapWrapper.set("name", "Ahushan");
-mapWrapper.set("age", 23);
-mapWrapper.set(100, "Number key");
+  // Example Usage
+  const mapWrapper = new MapWrapper();
+  mapWrapper.set("name", "Ahushan");
+  mapWrapper.set("age", 23);
+  mapWrapper.set(100, "Number key");
 
-console.log("Has 'name'? ", mapWrapper.has("name"));
-console.log("Get 'age':", mapWrapper.get("age"));
+  console.log("Has 'name'? ", mapWrapper.has("name"));
+  console.log("Get 'age':", mapWrapper.get("age"));
 
-mapWrapper.print();
+  mapWrapper.print();
 
-mapWrapper.delete(100);
-console.log("After deleting key 100:");
-mapWrapper.print();
+  mapWrapper.delete(100);
+  console.log("After deleting key 100:");
+  mapWrapper.print();
 
-// 4. Usage Comments
-// JS Map is more flexible than object, allows non-string keys and preserves order
+  // 4. Usage Comments
+  // JS Map is more flexible than object, allows non-string keys and preserves order
 
-// 5. Pros & Cons
-// Pros: Flexible keys, iterable, ordered.  
-// Cons: Slightly slower than object for string keys in some cases.
+  // 5. Pros & Cons
+  // Pros: Flexible keys, iterable, ordered.  
+  // Cons: Slightly slower than object for string keys in some cases.
 
-// 6. Where to Use
-// - When you need ordered key-value pairs  
-// - Complex key types (objects, functions)  
-// - Lookup with dynamic keys
+  // 6. Where to Use
+  // - When you need ordered key-value pairs  
+  // - Complex key types (objects, functions)  
+  // - Lookup with dynamic keys
 
-// 7. Real-World Example
-// Example: Storing user sessions keyed by session objects
-
+  // 7. Real-World Example
+  // Example: Storing user sessions keyed by session objects
+}
 module.exports = { MapWrapper };

@@ -113,39 +113,41 @@ class AVLTree {
   }
 }
 
-// Example Initialization
-const avl = new AVLTree();
-avl.insert(30);
-avl.insert(20);
-avl.insert(40);
-avl.insert(10);
-avl.insert(25);
+if (require.main === module) {
 
-console.log("AVL Tree Inorder Traversal:");
-avl.printInorder();
+  // Example Initialization
+  const avl = new AVLTree();
+  avl.insert(30);
+  avl.insert(20);
+  avl.insert(40);
+  avl.insert(10);
+  avl.insert(25);
 
-// 4. Usage Comments
-// AVL Tree keeps BST balanced automatically for fast O(log n) search, insert, delete.
+  console.log("AVL Tree Inorder Traversal:");
+  avl.printInorder();
 
-// 5. Pros & Cons
-// Pros: Always balanced → O(log n) operations.  
-// Cons: More complex rotations, slightly higher memory usage.
+  // 4. Usage Comments
+  // AVL Tree keeps BST balanced automatically for fast O(log n) search, insert, delete.
 
-// 6. Where to Use
-// - Database indexing  
-// - Memory-efficient ordered maps  
-// - Any scenario needing balanced search tree
+  // 5. Pros & Cons
+  // Pros: Always balanced → O(log n) operations.  
+  // Cons: More complex rotations, slightly higher memory usage.
 
-// 7. Real-World Example
-// Example: Maintaining a sorted leaderboard
-const leaderboard = new AVLTree();
-leaderboard.insert(500);
-leaderboard.insert(300);
-leaderboard.insert(700);
-leaderboard.insert(600);
-leaderboard.insert(800);
+  // 6. Where to Use
+  // - Database indexing  
+  // - Memory-efficient ordered maps  
+  // - Any scenario needing balanced search tree
 
-console.log("Leaderboard scores (inorder):");
-leaderboard.printInorder();
+  // 7. Real-World Example
+  // Example: Maintaining a sorted leaderboard
+  const leaderboard = new AVLTree();
+  leaderboard.insert(500);
+  leaderboard.insert(300);
+  leaderboard.insert(700);
+  leaderboard.insert(600);
+  leaderboard.insert(800);
 
+  console.log("Leaderboard scores (inorder):");
+  leaderboard.printInorder();
+}
 module.exports = { AVLTree };

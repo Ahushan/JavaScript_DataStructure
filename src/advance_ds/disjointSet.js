@@ -45,16 +45,18 @@ class DisjointSet {
   }
 }
 
-// Example Usage
-const ds = new DisjointSet(5);
-ds.union(0, 1);
-ds.union(1, 2);
-ds.union(3, 4);
+if (require.main === module) {
+  // Example Usage
+  const ds = new DisjointSet(5);
+  ds.union(0, 1);
+  ds.union(1, 2);
+  ds.union(3, 4);
 
-console.log("Are 0 and 2 connected?", ds.connected(0, 2)); // true
-console.log("Are 0 and 4 connected?", ds.connected(0, 4)); // false
+  console.log("Are 0 and 2 connected?", ds.connected(0, 2)); // true
+  console.log("Are 0 and 4 connected?", ds.connected(0, 4)); // false
 
-ds.print();
+  ds.print();
+}
 
 // 4. Usage Comments
 // Disjoint Set efficiently tracks connected components in a set of elements.

@@ -1,6 +1,6 @@
-// ===========================
-// 📂 stackLinkedList.js - Stack using Linked List
-// ===========================
+
+// * stackLinkedList.js - Stack using Linked List
+
 
 // 1. Syntax for Stack
 // Stack is LIFO (Last In First Out). Using linked list, the top is the head of the list.

@@ -1,6 +1,6 @@
-// ===========================
-// 📂 stack.js - Stack (Array)
-// ===========================
+
+// * stack.js - Stack (Array)
+
 
 // 1. Syntax for Stack
 // A stack is a linear data structure that follows
@@ -45,53 +45,55 @@ class Stack {
   }
 }
 
-// Example Initialization
-const stack = new Stack();
+if (require.main === module) {
+  // Example Initialization
+  const stack = new Stack();
 
-// Adding elements
-stack.push(10);
-stack.push(20);
-stack.push(30);
-console.log("Stack after pushes:");
-stack.print();
+  // Adding elements
+  stack.push(10);
+  stack.push(20);
+  stack.push(30);
+  console.log("Stack after pushes:");
+  stack.print();
 
-// Removing element
-console.log("Popped:", stack.pop());
+  // Removing element
+  console.log("Popped:", stack.pop());
 
-// Peeking
-console.log("Top element:", stack.peek());
+  // Peeking
+  console.log("Top element:", stack.peek());
 
-// Final stack
-console.log("Stack after operations:");
-stack.print();
+  // Final stack
+  console.log("Stack after operations:");
+  stack.print();
 
-// 4. Usage Comments
-// Stack works on LIFO principle, good for backtracking and recursion-like problems.
+  // 4. Usage Comments
+  // Stack works on LIFO principle, good for backtracking and recursion-like problems.
 
-// 5. Pros & Cons
-// Pros: Simple to implement, fast operations (O(1) push/pop).
-// Cons: Limited access (only top element accessible).
-// If implemented with arrays, resizing might cost performance in rare cases.
+  // 5. Pros & Cons
+  // Pros: Simple to implement, fast operations (O(1) push/pop).
+  // Cons: Limited access (only top element accessible).
+  // If implemented with arrays, resizing might cost performance in rare cases.
 
-// 6. Where to Use
-// - Undo/Redo functionality in editors.
-// - Backtracking algorithms (maze solving).
-// - Expression evaluation (postfix/prefix).
-// - Function call stack in programming languages.
+  // 6. Where to Use
+  // - Undo/Redo functionality in editors.
+  // - Backtracking algorithms (maze solving).
+  // - Expression evaluation (postfix/prefix).
+  // - Function call stack in programming languages.
 
-// 7. Real-World Example
-// Example: Browser back navigation (using stack)
-const historyStack = new Stack();
+  // 7. Real-World Example
+  // Example: Browser back navigation (using stack)
+  const historyStack = new Stack();
 
-// User visits pages
-historyStack.push("google.com");
-historyStack.push("youtube.com");
-historyStack.push("github.com");
+  // User visits pages
+  historyStack.push("google.com");
+  historyStack.push("youtube.com");
+  historyStack.push("github.com");
 
-// User presses "back"
-console.log("⬅️ Back to:", historyStack.pop());
+  // User presses "back"
+  console.log("Back to:", historyStack.pop());
 
-// Current page
-console.log("🌐 Current Page:", historyStack.peek());
+  // Current page
+  console.log("Current Page:", historyStack.peek());
+}
 
-module.exports = { Stack}
+module.exports = { Stack }

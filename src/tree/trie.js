@@ -65,40 +65,42 @@ class Trie {
   }
 }
 
-// Example Initialization
-const trie = new Trie();
-trie.insert("hello");
-trie.insert("hi");
-trie.insert("helium");
+if (require.main === module) {
 
-console.log("Search 'hi':", trie.search("hi"));       // true
-console.log("Search 'hey':", trie.search("hey"));     // false
-console.log("Starts with 'he':", trie.startsWith("he")); // true
+  // Example Initialization
+  const trie = new Trie();
+  trie.insert("hello");
+  trie.insert("hi");
+  trie.insert("helium");
 
-console.log("All words in Trie:");
-trie.printAllWords();
+  console.log("Search 'hi':", trie.search("hi"));       // true
+  console.log("Search 'hey':", trie.search("hey"));     // false
+  console.log("Starts with 'he':", trie.startsWith("he")); // true
 
-// 4. Usage Comments
-// Trie efficiently stores and retrieves strings, especially for prefix search.
+  console.log("All words in Trie:");
+  trie.printAllWords();
 
-// 5. Pros & Cons
-// Pros: Fast search, prefix-based operations, O(L) for word of length L.
-// Cons: Can consume a lot of memory for large alphabets or many words.
+  // 4. Usage Comments
+  // Trie efficiently stores and retrieves strings, especially for prefix search.
 
-// 6. Where to Use
-// - Autocomplete / suggestion engines
-// - Spell-checkers
-// - IP routing / dictionary implementations
+  // 5. Pros & Cons
+  // Pros: Fast search, prefix-based operations, O(L) for word of length L.
+  // Cons: Can consume a lot of memory for large alphabets or many words.
 
-// 7. Real-World Example
-// Example: Autocomplete for search bar
-const searchTrie = new Trie();
-searchTrie.insert("apple");
-searchTrie.insert("app");
-searchTrie.insert("application");
-searchTrie.insert("banana");
+  // 6. Where to Use
+  // - Autocomplete / suggestion engines
+  // - Spell-checkers
+  // - IP routing / dictionary implementations
 
-console.log("Autocomplete for 'app':");
-searchTrie.printAllWords(searchTrie.root.children['a'].children['p']);
+  // 7. Real-World Example
+  // Example: Autocomplete for search bar
+  const searchTrie = new Trie();
+  searchTrie.insert("apple");
+  searchTrie.insert("app");
+  searchTrie.insert("application");
+  searchTrie.insert("banana");
 
+  console.log("Autocomplete for 'app':");
+  searchTrie.printAllWords(searchTrie.root.children['a'].children['p']);
+}
 module.exports = { Trie };

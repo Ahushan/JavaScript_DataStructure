@@ -99,46 +99,47 @@ class MaxHeap {
     console.log("Heap:", this.heap);
   }
 }
+if (require.main === module) {
 
-// Example Initialization
-const maxHeap = new MaxHeap();
-maxHeap.insert(10);
-maxHeap.insert(50);
-maxHeap.insert(30);
-maxHeap.insert(40);
+  // Example Initialization
+  const maxHeap = new MaxHeap();
+  maxHeap.insert(10);
+  maxHeap.insert(50);
+  maxHeap.insert(30);
+  maxHeap.insert(40);
 
-console.log("Max Heap after insertions:");
-maxHeap.print();
+  console.log("Max Heap after insertions:");
+  maxHeap.print();
 
-console.log("Extract Max:", maxHeap.extractMax());
-console.log("Heap after extracting max:");
-maxHeap.print();
+  console.log("Extract Max:", maxHeap.extractMax());
+  console.log("Heap after extracting max:");
+  maxHeap.print();
 
-console.log("Peek Max:", maxHeap.peek());
+  console.log("Peek Max:", maxHeap.peek());
 
-// 4. Usage Comments
-// Max heap keeps the largest element at root.  
-// Useful in priority queues or sorting (heap sort).
+  // 4. Usage Comments
+  // Max heap keeps the largest element at root.  
+  // Useful in priority queues or sorting (heap sort).
 
-// 5. Pros & Cons
-// Pros: O(log n) insert/remove, fast max retrieval.  
-// Cons: No direct access to arbitrary elements, requires array operations.
+  // 5. Pros & Cons
+  // Pros: O(log n) insert/remove, fast max retrieval.  
+  // Cons: No direct access to arbitrary elements, requires array operations.
 
-// 6. Where to Use
-// - Priority queues (high priority tasks first)  
-// - Heap sort algorithm  
-// - Event-driven simulations
+  // 6. Where to Use
+  // - Priority queues (high priority tasks first)  
+  // - Heap sort algorithm  
+  // - Event-driven simulations
 
-// 7. Real-World Example
-// Example: CPU task scheduler prioritizing highest priority task
-const tasks = new MaxHeap();
-tasks.insert({ task: "Task A", priority: 3 });
-tasks.insert({ task: "Task B", priority: 5 });
-tasks.insert({ task: "Task C", priority: 2 });
+  // 7. Real-World Example
+  // Example: CPU task scheduler prioritizing highest priority task
+  const tasks = new MaxHeap();
+  tasks.insert({ task: "Task A", priority: 3 });
+  tasks.insert({ task: "Task B", priority: 5 });
+  tasks.insert({ task: "Task C", priority: 2 });
 
-// Normally, a custom comparator is used for objects.
-// For simplicity, using numbers directly.
-console.log("Heap of task priorities:");
-maxHeap.print();
-
+  // Normally, a custom comparator is used for objects.
+  // For simplicity, using numbers directly.
+  console.log("Heap of task priorities:");
+  tasks.print();
+}
 module.exports = { MaxHeap };

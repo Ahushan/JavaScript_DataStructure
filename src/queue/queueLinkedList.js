@@ -66,49 +66,51 @@ class QueueLinkedList {
     console.log(result.join(" <- "));
   }
 }
+if (require.main === module) {
 
-// Example Initialization
-const queueLL = new QueueLinkedList();
+  // Example Initialization
+  const queueLL = new QueueLinkedList();
 
-// Adding elements
-queueLL.enqueue(10);
-queueLL.enqueue(20);
-queueLL.enqueue(30);
-console.log("Queue after enqueues:");
-queueLL.print();
+  // Adding elements
+  queueLL.enqueue(10);
+  queueLL.enqueue(20);
+  queueLL.enqueue(30);
+  console.log("Queue after enqueues:");
+  queueLL.print();
 
-// Removing element
-console.log("Dequeued:", queueLL.dequeue());
+  // Removing element
+  console.log("Dequeued:", queueLL.dequeue());
 
-// Peeking
-console.log("Front element:", queueLL.peek());
+  // Peeking
+  console.log("Front element:", queueLL.peek());
 
-// Final queue
-console.log("Queue after operations:");
-queueLL.print();
+  // Final queue
+  console.log("Queue after operations:");
+  queueLL.print();
 
-// 4. Usage Comments
-// Linked list queue avoids array shift() overhead and allows dynamic memory.
+  // 4. Usage Comments
+  // Linked list queue avoids array shift() overhead and allows dynamic memory.
 
-// 5. Pros & Cons
-// Pros: O(1) enqueue/dequeue, dynamic memory, no array resizing.
-// Cons: Extra memory per node, slightly more complex than array queue.
+  // 5. Pros & Cons
+  // Pros: O(1) enqueue/dequeue, dynamic memory, no array resizing.
+  // Cons: Extra memory per node, slightly more complex than array queue.
 
-// 6. Where to Use
-// - Task scheduling
-// - BFS traversal
-// - Message queues
+  // 6. Where to Use
+  // - Task scheduling
+  // - BFS traversal
+  // - Message queues
 
-// 7. Real-World Example
-// Example: Customer service line simulation
-const customerQueue = new QueueLinkedList();
-customerQueue.enqueue("Customer A");
-customerQueue.enqueue("Customer B");
-customerQueue.enqueue("Customer C");
+  // 7. Real-World Example
+  // Example: Customer service line simulation
+  const customerQueue = new QueueLinkedList();
+  customerQueue.enqueue("Customer A");
+  customerQueue.enqueue("Customer B");
+  customerQueue.enqueue("Customer C");
 
-console.log("Queue of customers:");
-customerQueue.print();
-console.log("Serving:", customerQueue.dequeue());
-console.log("Next in line:", customerQueue.peek());
+  console.log("Queue of customers:");
+  customerQueue.print();
+  console.log("Serving:", customerQueue.dequeue());
+  console.log("Next in line:", customerQueue.peek());
+}
 
 module.exports = { QueueLinkedList }

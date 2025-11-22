@@ -147,46 +147,48 @@ class SinglyLinkedList {
     console.log(result.join(" -> "));
   }
 }
+if (require.main === module) {
 
-// Example Initialization
-const linkedList = new SinglyLinkedList();
+  // Example Initialization
+  const linkedList = new SinglyLinkedList();
 
-// Add nodes
-linkedList.append(10);
-linkedList.append(20);
-linkedList.append(30);
-console.log("Linked List after additions:");
-linkedList.print();
+  // Add nodes
+  linkedList.append(10);
+  linkedList.append(20);
+  linkedList.append(30);
+  console.log("Linked List after additions:");
+  linkedList.print();
 
-// Remove nodes
-console.log("Removed first:", linkedList.removeFirst());
-console.log("Removed last:", linkedList.removeLast());
-console.log("Linked List after removals:");
-linkedList.print();
+  // Remove nodes
+  console.log("Removed first:", linkedList.removeFirst());
+  console.log("Removed last:", linkedList.removeLast());
+  console.log("Linked List after removals:");
+  linkedList.print();
 
-// 4. Usage Comments
-// Linked list is good when frequent insertions/deletions are needed.
-// No fixed size; nodes can be added dynamically.
+  // 4. Usage Comments
+  // Linked list is good when frequent insertions/deletions are needed.
+  // No fixed size; nodes can be added dynamically.
 
-// 5. Pros & Cons
-// Pros: Dynamic size, efficient insert/delete at head/tail.  
-// Cons: No direct access by index, traversal is O(n).
+  // 5. Pros & Cons
+  // Pros: Dynamic size, efficient insert/delete at head/tail.  
+  // Cons: No direct access by index, traversal is O(n).
 
-// 6. Where to Use
-// - Implement stacks/queues.
-// - Dynamic memory allocation.
-// - Undo/Redo functionality.
+  // 6. Where to Use
+  // - Implement stacks/queues.
+  // - Dynamic memory allocation.
+  // - Undo/Redo functionality.
 
-// 7. Real-World Example
-// Example: Music playlist where songs are added or removed dynamically
-const playlist = new SinglyLinkedList();
-playlist.append("Song A");
-playlist.append("Song B");
-playlist.append("Song C");
-console.log("Playlist:");
-playlist.print();
-playlist.removeFirst(); // Remove played song
-console.log("Playlist after playing one song:");
-playlist.print();
+  // 7. Real-World Example
+  // Example: Music playlist where songs are added or removed dynamically
+  const playlist = new SinglyLinkedList();
+  playlist.append("Song A");
+  playlist.append("Song B");
+  playlist.append("Song C");
+  console.log("Playlist:");
+  playlist.print();
+  playlist.removeFirst(); // Remove played song
+  console.log("Playlist after playing one song:");
+  playlist.print();
 
+}
 module.exports = { SinglyLinkedList }

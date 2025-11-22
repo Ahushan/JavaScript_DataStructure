@@ -41,55 +41,56 @@ class Queue {
     console.log(this.items.join(" <- "));
   }
 }
+if (require.main === module) {
 
-// Example Initialization
-const queue = new Queue();
+  // Example Initialization
+  const queue = new Queue();
 
-// Adding elements
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-console.log("Queue after enqueues:");
-queue.print();
+  // Adding elements
+  queue.enqueue(10);
+  queue.enqueue(20);
+  queue.enqueue(30);
+  console.log("Queue after enqueues:");
+  queue.print();
 
-// Removing element
-console.log("Dequeued:", queue.dequeue());
+  // Removing element
+  console.log("Dequeued:", queue.dequeue());
 
-// Peeking
-console.log("Front element:", queue.peek());
+  // Peeking
+  console.log("Front element:", queue.peek());
 
-// Final queue
-console.log("Queue after operations:");
-queue.print();
+  // Final queue
+  console.log("Queue after operations:");
+  queue.print();
 
-// 4. Usage Comments
-// Queue works on FIFO principle, good for scheduling and resource sharing.
+  // 4. Usage Comments
+  // Queue works on FIFO principle, good for scheduling and resource sharing.
 
-// 5. Pros & Cons
-// Pros: Simple to implement, fair ordering of elements.
-// Cons: Using arrays, `shift()` has O(n) cost (inefficient for large queues).
-// (Better implementation: linked list or circular array).
+  // 5. Pros & Cons
+  // Pros: Simple to implement, fair ordering of elements.
+  // Cons: Using arrays, `shift()` has O(n) cost (inefficient for large queues).
+  // (Better implementation: linked list or circular array).
 
-// 6. Where to Use
-// - Task scheduling (CPU jobs, printers).
-// - Message queues in communication systems.
-// - Breadth-first search (BFS) in graphs.
-// - Rate limiting in APIs.
+  // 6. Where to Use
+  // - Task scheduling (CPU jobs, printers).
+  // - Message queues in communication systems.
+  // - Breadth-first search (BFS) in graphs.
+  // - Rate limiting in APIs.
 
-// 7. Real-World Example
-// Example: Customer service line simulation
-const customerQueue = new Queue();
+  // 7. Real-World Example
+  // Example: Customer service line simulation
+  const customerQueue = new Queue();
 
-// Customers arrive
-customerQueue.enqueue("Customer A");
-customerQueue.enqueue("Customer B");
-customerQueue.enqueue("Customer C");
+  // Customers arrive
+  customerQueue.enqueue("Customer A");
+  customerQueue.enqueue("Customer B");
+  customerQueue.enqueue("Customer C");
 
-console.log("Customers in queue:");
-customerQueue.print();
+  console.log("Customers in queue:");
+  customerQueue.print();
 
-// Serving customers
-console.log("Serving:", customerQueue.dequeue());
-console.log("Next in line:", customerQueue.peek());
-
-module.exports = { Queue}
+  // Serving customers
+  console.log("Serving:", customerQueue.dequeue());
+  console.log("Next in line:", customerQueue.peek());
+}
+module.exports = { Queue }

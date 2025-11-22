@@ -100,47 +100,49 @@ class MinHeap {
     console.log("Heap:", this.heap);
   }
 }
+if (require.main ===  module) {
 
-// Example Initialization
-const minHeap = new MinHeap();
-minHeap.insert(50);
-minHeap.insert(20);
-minHeap.insert(30);
-minHeap.insert(10);
+  // Example Initialization
+  const minHeap = new MinHeap();
+  minHeap.insert(50);
+  minHeap.insert(20);
+  minHeap.insert(30);
+  minHeap.insert(10);
 
-console.log("Min Heap after insertions:");
-minHeap.print();
+  console.log("Min Heap after insertions:");
+  minHeap.print();
 
-console.log("Extract Min:", minHeap.extractMin());
-console.log("Heap after extracting min:");
-minHeap.print();
+  console.log("Extract Min:", minHeap.extractMin());
+  console.log("Heap after extracting min:");
+  minHeap.print();
 
-console.log("Peek Min:", minHeap.peek());
+  console.log("Peek Min:", minHeap.peek());
 
-// 4. Usage Comments
-// Min heap maintains the smallest element at the root.  
-// Used in priority queues and efficient retrieval of minimum.
+  // 4. Usage Comments
+  // Min heap maintains the smallest element at the root.  
+  // Used in priority queues and efficient retrieval of minimum.
 
-// 5. Pros & Cons
-// Pros: O(log n) insert and remove, efficient min retrieval.  
-// Cons: No direct access to arbitrary elements, requires array manipulation.
+  // 5. Pros & Cons
+  // Pros: O(log n) insert and remove, efficient min retrieval.  
+  // Cons: No direct access to arbitrary elements, requires array manipulation.
 
-// 6. Where to Use
-// - Priority queues (CPU scheduling, task management).  
-// - Dijkstra's algorithm for shortest paths.  
-// - Heap sort algorithm.
+  // 6. Where to Use
+  // - Priority queues (CPU scheduling, task management).  
+  // - Dijkstra's algorithm for shortest paths.  
+  // - Heap sort algorithm.
 
-// 7. Real-World Example
-// Example: Task manager with priority
-const tasks = new MinHeap();
-tasks.insert({ task: "Task A", priority: 3 });
-tasks.insert({ task: "Task B", priority: 1 });
-tasks.insert({ task: "Task C", priority: 2 });
+  // 7. Real-World Example
+  // Example: Task manager with priority
+  const tasks = new MinHeap();
+  tasks.insert({ task: "Task A", priority: 3 });
+  tasks.insert({ task: "Task B", priority: 1 });
+  tasks.insert({ task: "Task C", priority: 2 });
 
-// Since we need custom comparison, usually we implement a comparator.
-// For simplicity, using numbers for priority in real usage.
+  // Since we need custom comparison, usually we implement a comparator.
+  // For simplicity, using numbers for priority in real usage.
 
-console.log("Heap of task priorities:");
-minHeap.print();
+  console.log("Heap of task priorities:");
+  minHeap.print();
 
+}
 module.exports = { MinHeap };
